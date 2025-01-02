@@ -19,6 +19,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
     ],
   },
   resolve: {
@@ -26,13 +30,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html", // Plik szablonu
+      template: "./public/index.html",
     }),
   ],
   devServer: {
-    static: "./dist",
+    static: [
+      {
+        directory: path.join(__dirname),
+        publicPath: "/",
+        serveIndex: true,
+      },
+    ],
+    compress: true,
+    port: 3001,
     open: true,
     hot: true,
+    historyApiFallback: true,
   },
-  mode: "development",
 };
