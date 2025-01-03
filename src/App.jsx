@@ -1,10 +1,28 @@
 import React from "react";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { AppLayout } from "./layout/AppLayout";
+import { Home } from "./home/Home";
+import { About } from "./about/About.jsx";
 
 export const App = () => {
   console.log("App component rendered");
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100 font-rubik">
-      <h1 className="text-4xl font-bold text-red-500">Hello, Tailwind CSS!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={<AppLayout />}
+        >
+          <Route
+            index
+            element={<Home />}
+          />
+          <Route
+            path="about"
+            element={<About />}
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
