@@ -1,0 +1,27 @@
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { HiLightBulb } from "react-icons/hi";
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { toggleTheme } from "../../redux/slices/themeSlice";
+
+export const ThemeToggle = () => {
+  const mode = useSelector((state) => state.theme.mode);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (mode === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  });
+
+  return (
+    <button
+      onClick={() => dispatch(toggleTheme())}
+      className="px-4 py-2 bg-blue-500 text-white rounded dark:bg-blue-700"
+    >
+      {mode === "light" ? <HiOutlineLightBulb /> : <HiLightBulb />}
+    </button>
+  );
+};

@@ -1,8 +1,7 @@
 import React from "react";
 import { SiCodersrank } from "react-icons/si";
 import { IoIosLogIn } from "react-icons/io";
-import { HiLightBulb } from "react-icons/hi";
-import { HiOutlineLightBulb } from "react-icons/hi";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Navigation = () => {
   return (
@@ -19,7 +18,7 @@ export const Navigation = () => {
       </div>
       <div className="flex gap-1">
         <IoIosLogIn />
-        <HiLightBulb />
+        <ThemeToggle />
       </div>
     </div>
   );
