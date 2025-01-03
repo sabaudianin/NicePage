@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import { AppLayout } from "./layout/AppLayout";
-import { Home } from "./home/Home";
-import { About } from "./about/About.jsx";
+import { AppLayout } from "./components/layout/AppLayout.jsx";
+import { Home } from "./components/home/Home.jsx";
+import { About } from "./pages/about/About.jsx";
 
 export const App = () => {
   console.log("App component rendered");
