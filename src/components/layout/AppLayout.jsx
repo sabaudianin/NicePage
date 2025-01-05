@@ -6,10 +6,12 @@ import { Footer } from "../footer/Footer";
 
 export const AppLayout = () => {
   return (
-    <section>
-      <Navigation />
-      <Outlet />
-      <Footer />
+    <section className="flex justify-center bg-blue-100">
+      <div className="max-w-custom-3xl  ">
+        <Navigation />
+        <Outlet />
+        <Footer />
+      </div>
     </section>
   );
 };

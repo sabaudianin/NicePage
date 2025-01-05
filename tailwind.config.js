@@ -10,6 +10,9 @@ module.exports = {
         rubik: ["Rubik Vinyl", "serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      maxWidth: {
+        "custom-3xl": "2048px",
+      },
     },
   },
   plugins: [],

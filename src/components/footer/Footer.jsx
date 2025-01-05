@@ -1,5 +1,9 @@
 import React from "react";
 
 export const Footer = () => {
-  return <h2>Footer</h2>;
+  return (
+    <div className="bg-red-200 h-[10vh]">
+      <h2>Foooooooooooooooooooooooooooooter</h2>
+    </div>
+  );
 };
