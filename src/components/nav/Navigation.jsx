@@ -7,7 +7,7 @@ export const Navigation = () => {
   return (
     <div className="flex justify-between items-center py-4  dark:bg-gray-800 dark:text-white ">
       <div className="flex items-center ">
-        <h2>CodingBros</h2>
+        <h2>CB</h2>
         <SiCodersrank className="text-2xl" />
       </div>
 
