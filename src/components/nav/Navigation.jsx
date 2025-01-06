@@ -2,24 +2,29 @@ import React from "react";
 import { SiCodersrank } from "react-icons/si";
 import { IoIosLogIn } from "react-icons/io";
 import { ThemeToggle } from "./ThemeToggle";
+import { MenuHamburger } from "./MenuHamburger";
 
 export const Navigation = () => {
   return (
-    <div className="flex justify-between items-center py-4  dark:bg-gray-800 dark:text-white bg-yellow-400 ">
+    <nav className="flex justify-between items-center p-4 dark:bg-gray-800 dark:text-white shadow-light dark:shadow-dark">
       <div className="flex items-center ">
-        <h2>CB</h2>
         <SiCodersrank className="text-2xl" />
+        <p className="font-rubik mx-1">CodingBros</p>
       </div>
 
-      <div className="flex gap-1">
-        <p>link1</p>
-        <p>link2</p>
-        <p>link3</p>
+      <div className="hidden md:flex gap-4">
+        <a href="#link1">Link 1</a>
+        <a href="#link2">Link 2</a>
+        <a href="#link3">Link 3</a>
+        <a href="#link4">Link 4</a>
       </div>
-      <div className="flex gap-1">
-        <IoIosLogIn />
+      <div className="md:hidden">
+        <MenuHamburger />
+      </div>
+      <div className="flex items-center gap-1">
         <ThemeToggle />
+        <IoIosLogIn />
       </div>
-    </div>
+    </nav>
   );
 };

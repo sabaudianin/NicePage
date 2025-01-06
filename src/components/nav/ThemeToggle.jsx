@@ -19,9 +19,9 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={() => dispatch(toggleTheme())}
-      className="px-4 py-2 text-black "
+      className="px-4 py-2  "
     >
-      {mode === "light" ? <HiOutlineLightBulb /> : <HiLightBulb />}
+      {mode === "light" ? <HiLightBulb /> : <HiOutlineLightBulb />}
     </button>
   );
 };

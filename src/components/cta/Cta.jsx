@@ -2,8 +2,8 @@ import React from "react";
 
 export const Cta = () => {
   return (
-    <section className="bg-green-200 h-[80vh] flex justify-center">
-      <div className="lg:p-10">
+    <section className="h-[80vh] flex justify-center">
+      <div className="p-2 lg:p-10">
         <h2>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nulla
           magni, sapiente adipisci quos ipsam dolore laboriosam labore harum cum

@@ -13,6 +13,10 @@ module.exports = {
       maxWidth: {
         "custom-3xl": "2048px",
       },
+      boxShadow: {
+        light: "4px 4px 6px rgba(0, 0, 0, 0.1)",
+        dark: "4px 4px 6px rgba(254, 249, 249, 0.1)",
+      },
     },
   },
   plugins: [],
