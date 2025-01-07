@@ -93,6 +93,9 @@ export const Home = () => {
           className="h-screen bg-gray-400"
         >
           <h1>Section 3</h1>
+          <a>
+            https://www.youtube.com/watch?v=UnjKWSlwZWM&ab_channel=freeCodeCamp.org
+          </a>
         </section>
         <section
           id="section4"

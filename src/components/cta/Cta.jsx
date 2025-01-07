@@ -1,8 +1,9 @@
 import React from "react";
+import { Countdown } from "./Countdown";
 
 export const Cta = () => {
   return (
-    <section className="bg-[url('/images/bgCta.jpg')] bg-cover bg-center text-white">
+    <section className="bg-[url('/images/cta.jpg')] bg-cover bg-center text-white flex flex-col lg:flex-row items-center justify-between">
       <main className="flex flex-col justify-between items-center lg:w-1/2 font-poppins ">
         <div className="mt-10 p-6 lg:p-10 font-extrabold ">
           <h2 className="text-3xl  ">
@@ -13,7 +14,7 @@ export const Cta = () => {
           </h3>
         </div>
         <div className="flex flex-col gap-3 p-2">
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+          <button className="px-20 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 ">
             Buy Ticket now
           </button>
           <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
@@ -30,6 +31,11 @@ export const Cta = () => {
           <p className="text-sm mt-2">August 1-2, 2025 | Warsaw, Poland</p>
         </div>
       </main>
+      <aside className="hidden lg:flex lg:w-1/2 justify-center items-center">
+        <div className="bg-black bg-opacity-70 p-20 rounded-lg shadow-lg text-center">
+          <Countdown />
+        </div>
+      </aside>
     </section>
   );
 };
