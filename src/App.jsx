@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout.jsx";
 import { Home } from "./components/home/Home.jsx";
 import { About } from "./pages/about/About.jsx";
+import { Tickets } from "./components/tickets/Tickets.jsx";
 
 export const App = () => {
-  console.log("App component rendered");
   return (
     <BrowserRouter>
       <Routes>
@@ -20,6 +20,10 @@ export const App = () => {
           <Route
             path="about"
             element={<About />}
+          />
+          <Route
+            path="/tickets"
+            element={<Tickets />}
           />
         </Route>
       </Routes>

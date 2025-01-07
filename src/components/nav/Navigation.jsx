@@ -3,6 +3,7 @@ import { SiCodersrank } from "react-icons/si";
 import { IoIosLogIn } from "react-icons/io";
 import { ThemeToggle } from "./ThemeToggle";
 import { MenuHamburger } from "./MenuHamburger";
+import { NavLinks } from "./NavLinks";
 
 export const Navigation = () => {
   return (
@@ -11,19 +12,16 @@ export const Navigation = () => {
         <SiCodersrank className="text-2xl" />
         <p className="font-rubik mx-1">CodingBros</p>
       </div>
-
-      <div className="hidden md:flex gap-4">
-        <a href="#link1">Link 1</a>
-        <a href="#link2">Link 2</a>
-        <a href="#link3">Link 3</a>
-        <a href="#link4">Link 4</a>
-      </div>
-      <div className="md:hidden">
-        <MenuHamburger />
-      </div>
       <div className="flex items-center gap-1">
         <ThemeToggle />
         <IoIosLogIn />
+      </div>
+
+      <div className="hidden md:flex gap-4">
+        <NavLinks className="flex flex-row gap-4" />
+      </div>
+      <div className="md:hidden">
+        <MenuHamburger />
       </div>
     </nav>
   );

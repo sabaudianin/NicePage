@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+import { NavLinks } from "./NavLinks";
 
 export const MenuHamburger = () => {
   const [isVisible, setIsVisible] = useState("false");
@@ -13,40 +15,11 @@ export const MenuHamburger = () => {
         className="text-2xl p-2 focus:outline-none"
         onClick={toggleMenu}
       >
-        <GiHamburgerMenu />
+        {isVisible ? <IoMdClose /> : <GiHamburgerMenu />}
       </button>
       {isVisible && (
         <div className="absolute top-12 right-0 bg-white dark:bg-gray-700 shadow-md rounded p-4 flex flex-col gap-2">
-          <a
-            href="#link1"
-            className="hover:text-blue-500"
-          >
-            Link 1
-          </a>
-          <a
-            href="#link2"
-            className="hover:text-blue-500"
-          >
-            Link 2
-          </a>
-          <a
-            href="#link3"
-            className="hover:text-blue-500"
-          >
-            Link 3
-          </a>
-          <a
-            href="#link4"
-            className="hover:text-blue-500"
-          >
-            Link 4
-          </a>
-          <a
-            href="#link5"
-            className="hover:text-blue-500"
-          >
-            Link 5
-          </a>
+          <NavLinks className="flex flex-col gap-2" />
         </div>
       )}
     </div>
