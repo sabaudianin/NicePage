@@ -1,6 +1,6 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
 
 export const NavLinks = ({ className }) => {
   const scrollLinks = [
@@ -10,25 +10,34 @@ export const NavLinks = ({ className }) => {
     { to: "section4", label: "Link 4" },
   ];
 
+  const navigate = useNavigate();
+  const locattion = useLocation();
+
+  const handleNavigate = (target) => {
+    if (location.pathname === "/") {
+      ScrollLink.scrollTo(target, { smooth: true, duration: 500 });
+    } else {
+      navigate("/", { state: { target } });
+    }
+  };
+
   return (
     <div className={`${className}`}>
       {scrollLinks.map((link) => (
-        <ScrollLink
+        <button
           key={link.to}
-          to={link.to}
-          smooth={true}
-          duration={500}
+          onClick={() => handleNavigate(link.to)}
           className="cursor-pointer hover:text-red-500"
         >
           {link.label}
-        </ScrollLink>
+        </button>
       ))}
-      <RouterLink
-        to="/tickets"
+      <button
+        onClick={() => navigate("/tickets")}
         className="hover:text-orange-500"
       >
         Buy tickets
-      </RouterLink>
+      </button>
     </div>
   );
 };

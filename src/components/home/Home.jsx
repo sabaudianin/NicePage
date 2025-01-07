@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
 import { Cta } from "../cta/Cta";
 
 export const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.target) {
+      scroller.scrollTo(location.state.target, { smooth: true, duration: 500 });
+    }
+  }, [location]);
+
   return (
     <>
       <Cta />

@@ -3,15 +3,19 @@ import { SiCodersrank } from "react-icons/si";
 import { IoIosLogIn } from "react-icons/io";
 import { ThemeToggle } from "./ThemeToggle";
 import { MenuHamburger } from "./MenuHamburger";
+import { Link } from "react-router-dom";
 import { NavLinks } from "./NavLinks";
 
 export const Navigation = () => {
   return (
     <nav className="flex justify-between items-center p-4 dark:bg-gray-800 dark:text-white shadow-light dark:shadow-dark">
-      <div className="flex items-center ">
+      <Link
+        to="/"
+        className="flex items-center"
+      >
         <SiCodersrank className="text-2xl" />
         <p className="font-rubik mx-1">CodingBros</p>
-      </div>
+      </Link>
       <div className="flex items-center gap-1">
         <ThemeToggle />
         <IoIosLogIn />
