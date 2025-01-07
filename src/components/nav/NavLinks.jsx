@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { scroller } from "react-scroll";
 
 export const NavLinks = ({ className }) => {
   const scrollLinks = [
@@ -15,7 +15,7 @@ export const NavLinks = ({ className }) => {
 
   const handleNavigate = (target) => {
     if (location.pathname === "/") {
-      ScrollLink.scrollTo(target, { smooth: true, duration: 500 });
+      scroller.scrollTo(target, { smooth: true, duration: 500 });
     } else {
       navigate("/", { state: { target } });
     }
