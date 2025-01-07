@@ -8,13 +8,13 @@ import { NavLinks } from "./NavLinks";
 
 export const Navigation = () => {
   return (
-    <nav className="flex justify-between items-center p-4 dark:bg-gray-800 dark:text-white shadow-light dark:shadow-dark">
+    <nav className="flex justify-between items-center p-4 bg-slate-50 dark:bg-gray-800 dark:text-white shadow-light dark:shadow-dark sticky top-0 z-1 ">
       <Link
         to="/"
         className="flex items-center"
       >
         <SiCodersrank className="text-2xl" />
-        <p className="font-rubik mx-1">CodingBros</p>
+        <p className="font-rubik mx-1 ">CodingBros</p>
       </Link>
       <div className="flex items-center gap-1">
         <ThemeToggle />
