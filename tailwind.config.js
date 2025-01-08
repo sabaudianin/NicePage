@@ -19,9 +19,9 @@ module.exports = {
       },
       keyframes: {
         bgPulse: {
-          "0%": { background: "rgb(255, 125, 0)" },
+          "0%": { background: "rgb(240, 204, 173)" },
           "50%": { background: "rgb(255, 60, 0)" },
-          "100%": { background: "rgb(255, 125, 0)" },
+          "100%": { background: "rgb(238, 198, 160)" },
         },
       },
       animation: {

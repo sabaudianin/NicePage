@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 import { Cta } from "../cta/Cta";
 import { BuyTicketButton } from "../../elements/BuyTicketButton";
+import { AboutUs } from "../aboutUs/AboutUs";
 
 export const Home = () => {
   const location = useLocation();
@@ -19,18 +20,9 @@ export const Home = () => {
       <main>
         <section
           id="section1"
-          className="h-screen flex flex-col justify-between items-center py-20 gap-10 bg-indigo-900 dark:bg-neutral-900"
+          className="py-4 bg-indigo-100 dark:bg-neutral-900"
         >
-          <div className="bg-[url('/images/bgCta.jpg')] bg-cover  bg-no-repeat rounded-full h-96 w-96 "></div>
-          <div className="bg-[url('/images/chair.jpg')] bg-cover  bg-no-repeat rounded-full h-96 w-96  ">
-            <h2>Section 3333333333</h2>
-          </div>
-          <div className="bg-orange-300  rounded-full h-96 w-96 ">
-            <h2>Section </h2>
-          </div>
-          <div className="bg-purple-300  rounded-full h-96 w-96 ">
-            <h2>Section </h2>
-          </div>
+          <AboutUs />
         </section>
         <section
           id="section2"
