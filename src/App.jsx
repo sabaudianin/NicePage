@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout.jsx";
 import { Home } from "./components/home/Home.jsx";
 import { About } from "./pages/about/About.jsx";
-import { Tickets } from "./components/tickets/Tickets.jsx";
+import { Tickets } from "./pages/tickets/Tickets.jsx";
 
 export const App = () => {
   return (

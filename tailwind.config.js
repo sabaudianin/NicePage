@@ -17,6 +17,16 @@ module.exports = {
         light: "4px 4px 6px rgba(0, 0, 0, 0.1)",
         dark: "4px 4px 6px rgba(254, 249, 249, 0.1)",
       },
+      keyframes: {
+        bgPulse: {
+          "0%": { background: "rgb(255, 125, 0)" },
+          "50%": { background: "rgb(255, 60, 0)" },
+          "100%": { background: "rgb(255, 125, 0)" },
+        },
+      },
+      animation: {
+        bgPulse: "bgPulse 1.5s infinite",
+      },
     },
   },
   plugins: [],
