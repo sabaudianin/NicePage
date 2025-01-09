@@ -27,7 +27,7 @@ export const Home = () => {
           <AboutUs />
         </section>
         <NewsLetter />
-        <section className="overflow-x-hidden">
+        <section className="">
           <Technology />
         </section>
 

@@ -30,13 +30,13 @@ module.exports = {
           "100%": { color: "#fff)" },
         },
         iconCarusel: {
-          "0%": { transform: "translateX(100%)" },
+          "0%": { transform: "translateX(25%)" },
           "100%": { transform: "translateX(-100%)" },
         },
       },
       animation: {
         bgPulse: "bgPulse 3s infinite",
-        iconCarusel: "iconCarusel 35s linear infinite",
+        iconCarusel: "iconCarusel 45s linear infinite",
       },
     },
   },
