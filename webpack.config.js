@@ -1,56 +1,3 @@
-// const path = require("path");
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const Dotenv = require("dotenv-webpack");
-
-// module.exports = {
-//   entry: "./src/index.js",
-//   output: {
-//     path: path.resolve(__dirname, "dist"),
-//     filename: "bundle.js",
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /\.jsx?$/,
-//         exclude: /node_modules/,
-//         use: {
-//           loader: "babel-loader",
-//           options: {
-//             presets: ["@babel/preset-env", "@babel/preset-react"],
-//           },
-//         },
-//       },
-//       {
-//         test: /\.css$/i,
-//         use: ["style-loader", "css-loader", "postcss-loader"],
-//       },
-//     ],
-//   },
-//   resolve: {
-//     extensions: [".js", ".jsx"],
-//   },
-//   plugins: [
-//     new HtmlWebpackPlugin({
-//       template: "./public/index.html",
-//     }),
-//     new Dotenv(),
-//   ],
-//   devServer: {
-//     static: [
-//       {
-//         directory: path.join(__dirname),
-//         publicPath: "/",
-//         serveIndex: true,
-//       },
-//     ],
-//     compress: true,
-//     port: 3001,
-//     open: true,
-//     hot: true,
-//     historyApiFallback: true,
-//   },
-// };
-
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
@@ -78,7 +25,15 @@ module.exports = (env, argv) => {
         {
           test: /\.jsx?$/,
           exclude: /node_modules/,
-          use: "babel-loader", // Konfiguracja Babela jest w .babelrc
+          use: "babel-loader",
+          // Konfiguracja Babela jest w .babelrc
+          //         use: {
+          //           loader: "babel-loader",
+          //           options: {
+          //             presets: ["@babel/preset-env", "@babel/preset-react"],
+          //           },
+          //         },
+          //       },
         },
         {
           test: /\.css$/i,
@@ -87,7 +42,8 @@ module.exports = (env, argv) => {
             {
               loader: "css-loader",
               options: {
-                url: false, // Wyłącza przetwarzanie `url()` przez css-loader,public>src
+                url: false,
+                // Wyłącza przetwarzanie `url()` przez css-loader,public>src
               },
             },
 
@@ -101,7 +57,7 @@ module.exports = (env, argv) => {
             filename: "assets/images/[name][ext]",
           },
         },
-        // Możesz dodać obsługę fontów, np.:
+        //fonty
         // {
         //   test: /\.(woff2?|eot|ttf|otf)$/,
         //   type: 'asset/resource',
@@ -112,7 +68,7 @@ module.exports = (env, argv) => {
       ],
     },
 
-    // 5) Rozszerzenia, które bierzemy pod uwagę
+    // 5) Rozszerzenia
     resolve: {
       extensions: [".js", ".jsx"],
     },
@@ -122,8 +78,8 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: "./public/index.html",
       }),
-      // Wczytuje zmienne z .env do process.env
       new Dotenv(),
+      // Wczytuje zmienne z .env do process.env
     ],
 
     // 7) DevServer
