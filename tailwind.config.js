@@ -13,6 +13,9 @@ module.exports = {
         rubik: ["Rubik Vinyl", "serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      fontSize: {
+        xxs: [".5rem"],
+      },
       maxWidth: {
         "custom-3xl": "2048px",
       },
@@ -36,13 +39,13 @@ module.exports = {
     plugin(function ({ addUtilities }) {
       const newUtilities = {
         ".text-shadow": {
-          textShadow: "1px 1px 2px #000",
+          textShadow: "1px 1px 1px #000",
         },
         ".text-shadow-lg": {
-          textShadow: "4px 4px 8px #000",
+          textShadow: "2px 2px 8px #000",
         },
         ".text-shadow-fff": {
-          textShadow: "4px 4px 8px #fff",
+          textShadow: "2px 2px 8px #fff",
         },
       };
       addUtilities(newUtilities, ["hover", "dark"]);
