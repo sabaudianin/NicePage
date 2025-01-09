@@ -29,9 +29,14 @@ module.exports = {
           "50%": { color: "#000" },
           "100%": { color: "#fff)" },
         },
+        iconCarusel: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         bgPulse: "bgPulse 3s infinite",
+        iconCarusel: "iconCarusel 35s linear infinite",
       },
     },
   },
