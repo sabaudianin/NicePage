@@ -15,7 +15,7 @@ export const AboutCard = ({
       >
         <p className="mb-2 flex items-center">
           <b>{number}</b>
-          <span className="inline text-lg mr-2">
+          <span className="inline text-lg mr-1">
             <FaPlus />
           </span>
           {label}

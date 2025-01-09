@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
+import { BuyTicketButton } from "../../elements/BuyTicketButton";
 
 export const NavLinks = ({ className }) => {
   const scrollLinks = [
@@ -32,12 +33,8 @@ export const NavLinks = ({ className }) => {
           {link.label}
         </button>
       ))}
-      <button
-        onClick={() => navigate("/tickets")}
-        className="hover:text-orange-500"
-      >
-        Buy tickets
-      </button>
+
+      <BuyTicketButton />
     </div>
   );
 };

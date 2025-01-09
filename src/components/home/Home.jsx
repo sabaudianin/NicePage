@@ -4,6 +4,7 @@ import { scroller } from "react-scroll";
 import { Cta } from "../cta/Cta";
 import { BuyTicketButton } from "../../elements/BuyTicketButton";
 import { AboutUs } from "../aboutUs/AboutUs";
+import { NewsLetter } from "../newsletter/NewsLetter";
 
 export const Home = () => {
   const location = useLocation();
@@ -24,6 +25,7 @@ export const Home = () => {
         >
           <AboutUs />
         </section>
+        <NewsLetter />
         <section
           id="section2"
           className="h-screen bg-gray-300 overflow-auto"

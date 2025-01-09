@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -19,15 +22,30 @@ module.exports = {
       },
       keyframes: {
         bgPulse: {
-          "0%": { background: "rgb(240, 204, 173)" },
-          "50%": { background: "rgb(255, 60, 0)" },
-          "100%": { background: "rgb(238, 198, 160)" },
+          "0%": { color: "#fff" },
+          "50%": { color: "#000" },
+          "100%": { color: "#fff)" },
         },
       },
       animation: {
-        bgPulse: "bgPulse 1.5s infinite",
+        bgPulse: "bgPulse 3s infinite",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        ".text-shadow": {
+          textShadow: "1px 1px 2px #000",
+        },
+        ".text-shadow-lg": {
+          textShadow: "4px 4px 8px #000",
+        },
+        ".text-shadow-fff": {
+          textShadow: "4px 4px 8px #fff",
+        },
+      };
+      addUtilities(newUtilities, ["hover", "dark"]);
+    }),
+  ],
 };

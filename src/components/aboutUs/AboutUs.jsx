@@ -14,8 +14,8 @@ export const AboutUs = () => {
       number: "200",
       label: "Speakers",
       icon: LiaChalkboardTeacherSolid,
-      borderColor: "border-pink-500",
-      iconColor: "text-pink-500",
+      borderColor: "border-yellow-500",
+      iconColor: "text-yellow-500",
     },
     {
       number: "3000",
@@ -28,15 +28,15 @@ export const AboutUs = () => {
       number: "120",
       label: "Partners",
       icon: FaRegHandshake,
-      borderColor: "border-red-500",
-      iconColor: "text-red-500",
+      borderColor: " border-violet-500",
+      iconColor: " text-violet-500",
     },
     {
-      number: "50",
+      number: "10",
       label: "Workshops",
       icon: GrWorkshop,
-      borderColor: "border-yellow-500",
-      iconColor: "text-yellow-500",
+      borderColor: "border-pink-500",
+      iconColor: "text-pink-500",
     },
     {
       number: "800",
@@ -48,21 +48,18 @@ export const AboutUs = () => {
   ];
 
   return (
-    <section
-      className="my-6 px-4"
-      style={{ textShadow: "2px 2px 2px #fff" }}
-    >
+    <section className="my-6 px-4 text-shadow-lg dark:text-shadow-fff">
       <h2 className="text-5xl font-bold mb-8 text-center">
         Convent <span className="font-rubik">CodingBros</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
         <article className="text-4xl text-center font-medium">
-          <div className="w-full h-full rounded border-b-8 px-4 border-orange-500 z-0 flex items-center justify-center gap-2">
+          <div className="w-full h-full rounded border-b-8 px-4 border-red-500 z-0 flex items-center justify-center gap-2">
             <span className="mb-0 flex items-center">
               <b>3rd </b> &nbsp; Edition
             </span>
-            <LiaBirthdayCakeSolid className="text-orange-500 text-4xl inline" />
+            <LiaBirthdayCakeSolid className="text-red-500 text-4xl inline" />
           </div>
         </article>
 

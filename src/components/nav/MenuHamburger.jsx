@@ -46,7 +46,7 @@ export const MenuHamburger = () => {
       {isVisible && (
         <div
           ref={menuRef}
-          className="absolute top-12 right-0 bg-white dark:bg-gray-700 shadow-md rounded p-4 m-2 flex flex-col gap-2"
+          className="absolute top-22 right-[-15px] bg-white dark:bg-gray-700 shadow-md rounded p-2"
         >
           <NavLinks className="flex flex-col gap-2" />
         </div>
