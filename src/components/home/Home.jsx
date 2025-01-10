@@ -5,7 +5,8 @@ import { Cta } from "../cta/Cta";
 import { BuyTicketButton } from "../../elements/BuyTicketButton";
 import { AboutUs } from "../aboutUs/AboutUs";
 import { NewsLetter } from "../newsletter/NewsLetter";
-import { Technology } from "../technology/Technology";
+import { TechnologyMarquee } from "../technology/TechnologyMarquee";
+import { TechPath } from "../technology/TechPath";
 
 export const Home = () => {
   const location = useLocation();
@@ -19,7 +20,7 @@ export const Home = () => {
   return (
     <>
       <Cta />
-      <main>
+      <main className="bg-indigo-100 dark:bg-neutral-900">
         <section
           id="section1"
           className="py-4 bg-indigo-100 dark:bg-neutral-900"
@@ -28,7 +29,8 @@ export const Home = () => {
         </section>
         <NewsLetter />
         <section className="">
-          <Technology />
+          <TechnologyMarquee />
+          <TechPath />
         </section>
 
         <section

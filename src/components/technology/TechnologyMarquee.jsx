@@ -20,7 +20,7 @@ import {
 
 import { BiLogoVisualStudio } from "react-icons/bi";
 
-export const Technology = () => {
+export const TechnologyMarquee = () => {
   return (
     <section className="bg-indigo-100 dark:bg-neutral-900">
       <h2 className="font-rubik text-black text-5xl text-center text-pink-500">

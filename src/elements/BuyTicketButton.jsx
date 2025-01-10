@@ -1,7 +1,7 @@
 export const BuyTicketButton = () => {
   return (
     <div className="relative ">
-      <div className="absolute top-1 left-1 w-full h-full rounded       border-2 border-red-500 z-0 "></div>
+      <div className="absolute top-1 left-1 w-full h-full rounded border-2 border-red-500 z-0 "></div>
 
       <button
         onClick={() => console.log("Buy ticket")}
