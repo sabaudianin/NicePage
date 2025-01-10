@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { HiLightBulb } from "react-icons/hi";
 import { HiOutlineLightBulb } from "react-icons/hi";
-import { toggleTheme } from "../../redux/slices/themeSlice";
+import { toggleTheme } from "../redux/slices/themeSlice";
 
 export const ThemeToggle = () => {
   const mode = useSelector((state) => state.theme.mode);
@@ -14,7 +14,7 @@ export const ThemeToggle = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
-  });
+  }, [mode]);
 
   return (
     <button

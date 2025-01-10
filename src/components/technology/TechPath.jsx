@@ -5,7 +5,7 @@ export const TechPath = () => {
     <section className="p-4 text-gray-700 font-sans">
       <article className="mb-12 ">
         <h2 className="text-3xl font-bold mb-4 text-purple-500 text-center text-shadow dark:text-shadow-dark ">
-          <div className="flex justify-center items-center text-error ">
+          <div className="flex justify-center items-center text-error gap-2">
             <GiOnTarget />
             <GiOnTarget />
             <div className="rotate-y-180">
