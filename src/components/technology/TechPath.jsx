@@ -1,12 +1,25 @@
+import { GiOnTarget } from "react-icons/gi";
+
 export const TechPath = () => {
   return (
     <section className="p-4 text-gray-700 font-sans">
-      <article className="mb-12">
-        <h2 className="text-3xl font-bold mb-4">Tracks & Focus Areas</h2>
-        <span className="text-lg text-gray-700">
+      <article className="mb-12 ">
+        <h2 className="text-3xl font-bold mb-4 text-purple-500 text-center text-shadow dark:text-shadow-dark ">
+          <div className="flex justify-center items-center text-error ">
+            <GiOnTarget />
+            <GiOnTarget />
+            <div className="rotate-y-180">
+              <GiOnTarget />
+            </div>
+            <div>
+              <GiOnTarget className="rotate-y-180" />
+            </div>
+          </div>
+          Tracks & Focus Areas
+        </h2>
+        <span className="text-lg text-gray-700 font-semibold text-center">
           Discover the technologies, tools, and trends shaping the future of
-          development. Join us to explore cutting-edge innovations and practical
-          insights from industry leaders.
+          development.
         </span>
       </article>
 
@@ -116,7 +129,7 @@ export const TechPath = () => {
           </ul>
         </article>
 
-        <div class="col-span-1 lg:col-span-2 flex justify-center">
+        <div className="col-span-1 lg:col-span-2 flex justify-center">
           <article className="p-4 mb-10 bg-orange-100 rounded lg:col-span-2 ">
             <h3 className="text-2xl font-semibold text-orange-500 mb-3">
               Future-ready Frontend

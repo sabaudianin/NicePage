@@ -10,6 +10,19 @@ module.exports = {
   theme: {
     //Custom class
     extend: {
+      colors: {
+        primary: "#6366f1", // Indigo-500
+        secondary: "#9333ea", // Purple-600
+        accent: "#f472b6", // Pink-400
+        success: "#16a34a", // Green-600
+        warning: "#f97316", // Orange-500
+        error: "#ef4444", // Red-500
+        info: "#0284c7", // Sky-600
+        lightBackground: "#f8fafc", // Slate-50
+        darkBackground: "#374151", // Gray-700
+        highlight: "#8b5cf6", // Violet-500
+      },
+
       fontFamily: {
         rubik: ["Rubik Vinyl", "serif"],
         poppins: ["Poppins", "sans-serif"],
@@ -24,6 +37,7 @@ module.exports = {
         light: "4px 4px 6px rgba(0, 0, 0, 0.1)",
         dark: "4px 4px 6px rgba(254, 249, 249, 0.1)",
       },
+
       //Animations
       keyframes: {
         bgPulse: {
@@ -51,11 +65,20 @@ module.exports = {
         ".text-shadow": {
           textShadow: "1px 1px 1px #000",
         },
+        ".text-shadow-dark": {
+          textShadow: "1px 1px 1px #fff",
+        },
         ".text-shadow-lg": {
           textShadow: "2px 2px 8px #000",
         },
         ".text-shadow-fff": {
           textShadow: "2px 2px 8px #fff",
+        },
+        ".rotate-x-180": {
+          transform: "rotateX(180deg)",
+        },
+        ".rotate-y-180": {
+          transform: "rotateY(180deg)",
         },
       };
       addUtilities(newUtilities, ["hover", "dark"]);
