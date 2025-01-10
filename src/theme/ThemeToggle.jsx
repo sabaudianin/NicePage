@@ -8,6 +8,7 @@ export const ThemeToggle = () => {
   const mode = useSelector((state) => state.theme.mode);
   const dispatch = useDispatch();
 
+  //dynamic synchronization
   useEffect(() => {
     if (mode === "dark") {
       document.documentElement.classList.add("dark");
@@ -18,7 +19,7 @@ export const ThemeToggle = () => {
 
   return (
     <button
-      onClick={() => dispatch(toggleTheme())}
+      onClick={() => dispatch(toggleTheme(), console.log("clicked", mode))}
       className="px-4 py-2  "
     >
       {mode === "light" ? <HiLightBulb /> : <HiOutlineLightBulb />}

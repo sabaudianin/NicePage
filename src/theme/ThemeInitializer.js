@@ -11,11 +11,11 @@ export const ThemeInitializer = () => {
     const defaultTheme = getDefaultTheme();
     dispatch(setTheme(defaultTheme));
     //Synchronization redux=> tailwind
-    if (defaultTheme === "dark" || mode === "dark") {
+    if (defaultTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [mode]);
+  }, [dispatch]);
   return null;
 };
