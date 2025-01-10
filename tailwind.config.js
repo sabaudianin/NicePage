@@ -5,9 +5,10 @@ const plugin = require("tailwindcss/plugin");
 module.exports = {
   darkMode: "class",
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Wskazuje na pliki, w których używasz klasy Tailwind
+    "./src/**/*.{js,jsx,ts,tsx}", //.files where tailwind will be using class
   ],
   theme: {
+    //Custom class
     extend: {
       fontFamily: {
         rubik: ["Rubik Vinyl", "serif"],
@@ -23,6 +24,7 @@ module.exports = {
         light: "4px 4px 6px rgba(0, 0, 0, 0.1)",
         dark: "4px 4px 6px rgba(254, 249, 249, 0.1)",
       },
+      //Animations
       keyframes: {
         bgPulse: {
           "0%": { color: "#fff" },
@@ -30,18 +32,19 @@ module.exports = {
           "100%": { color: "#fff)" },
         },
         iconCarusel: {
-          "0%": { transform: "translateX(20%)" }, // Start na środku
-          "33%": { transform: "translateX(-80%)" }, // Do końca w lewo
-          "66%": { transform: "translateX(25%)" }, // Do końca w prawo
-          "100%": { transform: "translateX(-100%)" }, // Powrót na środek
+          "0%": { transform: "translateX(0%)" },
+          "33%": { transform: "translateX(-25%)" },
+          "66%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-25%)" },
         },
       },
       animation: {
         bgPulse: "bgPulse 3s infinite",
-        iconCarusel: "iconCarusel 30s linear infinite",
+        iconCarusel: "iconCarusel 60s linear infinite",
       },
     },
   },
+  //custom class not supported by tailwind, + import plugin (on top)
   plugins: [
     plugin(function ({ addUtilities }) {
       const newUtilities = {

@@ -8,7 +8,7 @@ import { NavLinks } from "./NavLinks";
 
 export const Navigation = () => {
   return (
-    <nav className="flex justify-between items-center p-4 bg-slate-50 dark:bg-gray-800 dark:text-white shadow-light dark:shadow-dark sticky top-0 z-10 ">
+    <nav className="flex justify-between items-center p-4 bg-slate-50 dark:bg-gray-800 dark:text-white shadow-light dark:shadow-dark sticky top-0 z-50 ">
       <Link
         to="/"
         className="flex items-center"
