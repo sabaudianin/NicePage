@@ -1,13 +1,11 @@
 import { GiOnTarget } from "react-icons/gi";
-import { FcOk } from "react-icons/fc";
-import { TbArrowForwardUp } from "react-icons/tb";
 import { TopicCard } from "./TopicCard";
 
 export const TechPath = () => {
   return (
     <section className="p-4 font-sans">
       <article className="mb-12 ">
-        <h2 className="text-3xl font-bold mb-4 text-purple-500 text-center text-shadow dark:text-shadow-dark ">
+        <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-purple-500 text-center text-shadow dark:text-shadow-dark ">
           <div className="flex justify-center items-center text-error gap-2">
             <GiOnTarget />
             <GiOnTarget />
@@ -51,7 +49,7 @@ export const TechPath = () => {
             "Automating and testing workflows using Vitest.",
             "Server optimization using cutting-edge tools.",
           ]}
-          bgColor="bg-indigo-300"
+          bgColor="bg-orange-300"
         />
         <TopicCard
           title="DevTools Mastery"
@@ -61,7 +59,7 @@ export const TechPath = () => {
             "Debugging and writing clean code using WebStorm and Visual Studio.",
             "Application optimization with Webpack.",
           ]}
-          bgColor="bg-pink-100"
+          bgColor="bg-green-300"
         />
 
         <TopicCard
@@ -72,7 +70,7 @@ export const TechPath = () => {
             "Managing complex projects with Redux.",
             "Integrating frontend and backend tools for cohesive applications.",
           ]}
-          bgColor="bg-violet-100"
+          bgColor="bg-pink-300"
         />
 
         <div className="col-span-1 lg:col-span-2 flex justify-center">
@@ -84,7 +82,7 @@ export const TechPath = () => {
               "Styling the future with TailwindCSS and Sass.",
               "Building high-performance applications with Vite.",
             ]}
-            bgColor="bg-orange-100"
+            bgColor="bg-sky-300"
           />
         </div>
       </div>

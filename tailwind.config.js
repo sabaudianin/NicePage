@@ -80,8 +80,8 @@ module.exports = {
         ".rotate-y-180": {
           transform: "rotateY(180deg)",
         },
-        ".scale-102": {
-          transform: "scale(1.02)",
+        ".scale-103": {
+          transform: "scale(1.03)",
         },
       };
       addUtilities(newUtilities, ["hover", "dark"]);
