@@ -11,58 +11,56 @@ import { AboutCard } from "./AboutCard";
 export const AboutUs = () => {
   const stats = [
     {
+      number: "3rd",
+      label: "Edition",
+      icon: LiaBirthdayCakeSolid,
+      borderColor: "border-orange-500",
+      iconColor: "text-orange-600",
+    },
+    {
       number: "200",
       label: "Speakers",
       icon: LiaChalkboardTeacherSolid,
-      borderColor: "border-yellow-500",
-      iconColor: "text-yellow-500",
+      borderColor: "border-orange-200",
+      iconColor: "text-orange-200",
     },
     {
       number: "3000",
       label: "Attendees",
       icon: IoPeopleSharp,
-      borderColor: "border-green-500",
-      iconColor: "text-green-500",
+      borderColor: "border-green-200",
+      iconColor: "text-green-200",
     },
     {
       number: "120",
       label: "Partners",
       icon: FaRegHandshake,
-      borderColor: " border-violet-500",
-      iconColor: " text-violet-500",
+      borderColor: "border-green-500",
+      iconColor: "text-green-500",
     },
     {
       number: "10",
       label: "Workshops",
       icon: GrWorkshop,
-      borderColor: "border-pink-500",
-      iconColor: "text-pink-500",
+      borderColor: "border-pink-200",
+      iconColor: "text-pink-200",
     },
     {
       number: "800",
       label: "Members",
       icon: HiOutlineUsers,
-      borderColor: "border-blue-500",
-      iconColor: "text-blue-500",
+      borderColor: "border-pink-500",
+      iconColor: "text-pink-500",
     },
   ];
 
   return (
-    <section className="my-6 px-4 text-shadow-lg dark:text-shadow-fff">
+    <section className="flex justify-center items-center flex-col text-shadow-lg dark:text-shadow-fff">
       <h2 className="text-5xl font-bold mb-8 text-center">
-        Convent <span className="font-rubik">CodingBros</span>
+        Convent <span className="font-rubik text-center">CodingBros</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
-        <article className="text-4xl text-center font-medium">
-          <div className="w-full h-full rounded border-b-8 px-4 border-red-500 z-0 flex items-center justify-center gap-2">
-            <span className="mb-0 flex items-center">
-              <b>3rd </b> &nbsp; Edition
-            </span>
-            <LiaBirthdayCakeSolid className="text-red-500 text-4xl inline" />
-          </div>
-        </article>
-
         {stats.map((stat, index) => (
           <AboutCard
             key={index}

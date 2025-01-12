@@ -14,7 +14,7 @@ export const Navigation = () => {
         className="flex items-center"
       >
         <SiCodersrank className="text-2xl" />
-        <p className="font-rubik mx-1 ">CodingBros</p>
+        <p className="font-rubik mx-1 text-xl lg:text-2xl">CodingBros</p>
       </Link>
       <div className="flex items-center gap-1">
         <ThemeToggle />

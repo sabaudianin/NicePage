@@ -6,7 +6,7 @@ import { BuyTicketButton } from "../../elements/BuyTicketButton";
 import { AboutUs } from "../aboutUs/AboutUs";
 import { NewsLetter } from "../newsletter/NewsLetter";
 import { TechnologyMarquee } from "../technology/TechnologyMarquee";
-import { TechPath } from "../technology/TechPath";
+import { TechCards } from "../technology/TechCards";
 
 export const Home = () => {
   const location = useLocation();
@@ -19,23 +19,25 @@ export const Home = () => {
 
   return (
     <>
-      <Cta />
-      <main className="bg-indigo-100 dark:bg-neutral-900">
+      <main className="bg-indigo-100 dark:bg-neutral-900 text-center">
+        <section>
+          <Cta />
+        </section>
         <section
+          className="my-10"
           id="section1"
-          className="py-4 bg-indigo-100 dark:bg-neutral-900"
         >
           <AboutUs />
         </section>
         <NewsLetter />
-        <section className="">
+        <section className="bg-lightBackground dark:bg-darkBackground">
           <TechnologyMarquee />
-          <TechPath />
+          <TechCards />
         </section>
 
         <section
           id="section2"
-          className="h-screen bg-gray-300 overflow-auto"
+          className="h-screen bg-black overflow-auto"
         >
           <h1>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit

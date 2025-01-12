@@ -2,10 +2,10 @@ import { FcOk } from "react-icons/fc";
 
 export const TopicCard = ({ title, description, topics, bgColor }) => {
   return (
-    <article
-      className={`p-4 rounded-xl hover:scale-103 hover:shadow-lg transition-transform duration-300 ${bgColor}`}
+    <section
+      className={`p-8 rounded-xl hover:scale-105 hover:shadow-lg transition-transform duration-300 ${bgColor}`}
     >
-      <h3 className="text-2xl lg:text-3xl font-poppins font-semibold text-shadow mb-3 text-center text-error">
+      <h3 className="text-2xl lg:text-3xl font-poppins font-semibold text-shadow mb-3 text-center">
         {title}
       </h3>
 
@@ -24,6 +24,6 @@ export const TopicCard = ({ title, description, topics, bgColor }) => {
           </li>
         ))}
       </ul>
-    </article>
+    </section>
   );
 };

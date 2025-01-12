@@ -22,12 +22,12 @@ import { BiLogoVisualStudio } from "react-icons/bi";
 
 export const TechnologyMarquee = () => {
   return (
-    <section className="bg-indigo-100 dark:bg-neutral-900">
+    <section className="bg-indigo-100 dark:bg-neutral-900 my-10">
       <h2 className="font-rubik text-black text-5xl text-center text-pink-500">
         Technology:
       </h2>
       <div className="relative w-full overflow-hidden py-20 text-6xl">
-        <div className="absolute top-10 flex gap-12 whitespace-nowrap animate-iconCarusel flex items-center justify-between">
+        <div className="absolute top-5 flex gap-x-12 whitespace-nowrap animate-iconCarusel flex items-center justify-between">
           <div>
             <FaJsSquare className="text-yellow-300 bg-black p-1/2 rounded" />
           </div>

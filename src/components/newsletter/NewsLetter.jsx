@@ -39,7 +39,7 @@ export const NewsLetter = () => {
             By providing your email address you accept the Privacy Policy.
           </span>
           {errors.email && (
-            <p className="text-red-600 text-xl text-shadow font-semibold">
+            <p className="text-xl text-shadow font-semibold">
               {errors.email.message}
             </p>
           )}

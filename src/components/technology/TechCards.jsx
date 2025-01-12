@@ -1,12 +1,12 @@
 import { GiOnTarget } from "react-icons/gi";
 import { TopicCard } from "./TopicCard";
 
-export const TechPath = () => {
+export const TechCards = () => {
   return (
-    <section className="p-4 font-sans">
-      <article className="mb-12 ">
-        <h2 className="text-3xl xl:text-4xl font-bold mb-4 text-purple-500 text-center text-shadow dark:text-shadow-dark ">
-          <div className="flex justify-center items-center text-error gap-2">
+    <section className="bg-lightBackground dark:bg-darkBackground">
+      <article className="font-sans ">
+        <h2 className="text-3xl xl:text-4xl font-bold text-center text-shadow dark:text-shadow-dark text-pink-500  ">
+          <div className="flex justify-center items-center text-pink-500 gap-2 ">
             <GiOnTarget />
             <GiOnTarget />
             <div className="rotate-y-180">
@@ -18,13 +18,13 @@ export const TechPath = () => {
           </div>
           Tracks & Focus Areas
         </h2>
-        <p className="text-lg  font-semibold text-center">
+        <p className="px-4 text-lg font-semibold text-center">
           Discover the technologies, tools, and trends shaping the future of
           development.
         </p>
       </article>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-10">
         <TopicCard
           title="Frontend & Design Excellence"
           description="Technologies and tools for building interactive and visually
