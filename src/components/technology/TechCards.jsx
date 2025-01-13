@@ -3,7 +3,7 @@ import { TopicCard } from "./TopicCard";
 
 export const TechCards = () => {
   return (
-    <section className="bg-lightBackground dark:bg-darkBackground">
+    <section className="bg-lightBackground dark:bg-darkBackground py-10">
       <article className="font-sans ">
         <h2 className="text-3xl xl:text-4xl font-bold text-center text-shadow dark:text-shadow-dark text-pink-500  ">
           <div className="flex justify-center items-center text-pink-500 gap-2 ">

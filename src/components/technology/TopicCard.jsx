@@ -17,7 +17,7 @@ export const TopicCard = ({ title, description, topics, bgColor }) => {
         {topics.map((item, index) => (
           <li
             key={index}
-            className="text-gray-700 flex items-center gap-1 hover:font-semibold"
+            className="text-gray-700 flex items-center gap-1 hover:font-semibold transition-transform duration-300"
           >
             <FcOk className="text-2xl" />
             {item}
