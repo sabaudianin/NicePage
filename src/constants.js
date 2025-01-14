@@ -14,4 +14,9 @@ export const speakers = [
     about: "First Dog developer",
     img: "/images/stacy.jpg",
   },
+  {
+    name: "@MrX",
+    about: "Real Satoshi Nakamoto",
+    img: "/images/chair.jpg",
+  },
 ];

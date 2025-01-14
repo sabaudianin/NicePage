@@ -31,23 +31,37 @@ export const Home = () => {
           <AboutUs />
         </section>
         <NewsLetter />
-        <section className="">
+        <section className="bg-[url('/images/code.jpg')] bg-fixed">
           <TechnologyMarquee />
           <TechCards />
         </section>
 
         <section
           id="section2"
-          className="bg-indigo-100 dark:bg-neutral-900 py-4"
+          className="bg-[url('/images/bgCta.jpg')] bg-cover bg-center "
         >
           <Speakers />
         </section>
         <section
           id="section3"
-          className=" h-screen flex flex-col justify-around items-center "
+          className="h-screen flex flex-col justify-around items-center bg-[url('/images/bgCta.jpg')] bg-cover bg-bottom"
         >
           <BuyTicketButton />
         </section>
+        <>
+          <div className="mt-10 p-6 lg:p-10 font-extrabold">
+            <p className="text-2xl lg:text-3xl font-semibold italic text-center ">
+              Be part of the top Web Development Convention in
+              <span className="m-2 before:absolute before:inset-0 before:skew-y-2 before:bg-pink-500 relative inline-block">
+                <span className="relative text-3xl">Poland.</span>
+              </span>
+            </p>
+
+            <h3 className="text-lg p-10 text-shadow-md">
+              Join Poland's premier event for web developers!
+            </h3>
+          </div>
+        </>
         <section
           id="section4"
           className="h-screen bg-gray-500"

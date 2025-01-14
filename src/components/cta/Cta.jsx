@@ -12,7 +12,7 @@ export const Cta = () => {
         <div className="mt-10 p-6 lg:p-10 font-extrabold">
           <p className="text-2xl lg:text-3xl font-semibold italic text-center ">
             Be part of the top Web Development Convention in
-            <span className="m-2 before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-pink-500 relative inline-block">
+            <span className="m-2 before:absolute before:inset-0 before:skew-y-2 before:bg-pink-500 relative inline-block">
               <span className="relative text-3xl">Poland.</span>
             </span>
           </p>

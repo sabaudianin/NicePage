@@ -18,8 +18,8 @@ module.exports = {
         warning: "#f97316", // Orange-500
         error: "#ef4444", // Red-500
         info: "#0284c7", // Sky-600
-        lightBackground: "#f8fafc", // Slate-50
-        darkBackground: "#374151", // Gray-700
+        themeSlate50: "#f8fafc", // Slate-50
+        themeGray700: "#374151", // Gray-700
         highlight: "#8b5cf6", // Violet-500
       },
 
@@ -63,7 +63,7 @@ module.exports = {
     plugin(function ({ addUtilities }) {
       const newUtilities = {
         ".text-shadow": {
-          textShadow: "1px 1px 1px #000",
+          textShadow: "1px 1px 1px #848482",
         },
         ".text-shadow-dark": {
           textShadow: "1px 1px 1px #fff",
