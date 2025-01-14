@@ -1,6 +1,7 @@
 import { SpeakerCard } from "./SpeakerCard";
 import { speakers } from "../../constants.js";
 import { DecorLine } from "../../elements/Decorline.jsx";
+import { JoinAsASpeaker } from "../../elements/JoinAsASpeaker.jsx";
 
 export const Speakers = () => {
   return (
@@ -21,9 +22,7 @@ export const Speakers = () => {
         ))}
       </div>
 
-      <button className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600">
-        Join as a Speaker
-      </button>
+      <JoinAsASpeaker />
     </section>
   );
 };

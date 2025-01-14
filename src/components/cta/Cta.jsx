@@ -1,6 +1,8 @@
 import React from "react";
 import { Countdown } from "./Countdown";
 import { BuyTicketButton } from "../../elements/BuyTicketButton";
+import { JoinAsASpeaker } from "../../elements/JoinAsASpeaker";
+import { BecomeASponsor } from "../../elements/BecomeSponsor";
 
 export const Cta = () => {
   return (
@@ -21,12 +23,8 @@ export const Cta = () => {
         </div>
         <div className="flex flex-col gap-3 p-2">
           <BuyTicketButton />
-          <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
-            Become a Sponsor
-          </button>
-          <button className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600">
-            Join as a Speaker
-          </button>
+          <BecomeASponsor />
+          <JoinAsASpeaker />
         </div>
         <div className="text-center p-6 rounded-lg shadow-lg">
           <p className="text-md">

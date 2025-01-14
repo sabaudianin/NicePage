@@ -8,6 +8,7 @@ export const BuyTicketButton = () => {
         className="
             relative 
             z-1
+            w-full
             px-20
             py-2
             bg-orange-400
