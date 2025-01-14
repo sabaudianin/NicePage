@@ -7,6 +7,7 @@ import { AboutUs } from "../aboutUs/AboutUs";
 import { NewsLetter } from "../newsletter/NewsLetter";
 import { TechnologyMarquee } from "../technology/TechnologyMarquee";
 import { TechCards } from "../technology/TechCards";
+import { Speakers } from "../speakers/Speakers.jsx";
 
 export const Home = () => {
   const location = useLocation();
@@ -37,9 +38,9 @@ export const Home = () => {
 
         <section
           id="section2"
-          className="h-screen bg-black overflow-auto"
+          className="bg-indigo-100 dark:bg-neutral-900 py-4"
         >
-          <h2></h2>
+          <Speakers />
         </section>
         <section
           id="section3"
