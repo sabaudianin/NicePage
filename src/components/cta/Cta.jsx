@@ -8,9 +8,13 @@ export const Cta = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
       <main className="relative flex flex-col justify-between items-center lg:w-1/2 font-poppins z-1">
         <div className="mt-10 p-6 lg:p-10 font-extrabold">
-          <h2 className="text-3xl text-shadow-lg">
-            Be part of the top Web Development Convention in Poland.
-          </h2>
+          <p className="text-2xl lg:text-3xl font-semibold italic text-center ">
+            Be part of the top Web Development Convention in
+            <span className="m-2 before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-pink-500 relative inline-block">
+              <span className="relative text-3xl">Poland.</span>
+            </span>
+          </p>
+
           <h3 className="text-lg p-10 text-shadow-md">
             Join Poland's premier event for web developers!
           </h3>

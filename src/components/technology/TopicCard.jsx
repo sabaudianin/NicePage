@@ -11,7 +11,9 @@ export const TopicCard = ({ title, description, topics, bgColor }) => {
 
       <hr className="mx-auto w-3/4 border-2 my-2 border-darkBackground" />
 
-      <p className="text-gray-700 font-medium mb-4">{description}</p>
+      <p className="text-gray-700 font-medium mb-4  first-letter:text-3xl first-line:text-2xl">
+        {description}
+      </p>
 
       <ul className="space-y-1">
         {topics.map((item, index) => (

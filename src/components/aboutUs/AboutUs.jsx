@@ -14,8 +14,8 @@ export const AboutUs = () => {
       number: "3rd",
       label: "Edition",
       icon: LiaBirthdayCakeSolid,
-      borderColor: "border-orange-200",
-      iconColor: "text-orange-200",
+      borderColor: "border-orange-300",
+      iconColor: "text-orange-300",
     },
     {
       number: "200",
@@ -28,8 +28,8 @@ export const AboutUs = () => {
       number: "3000",
       label: "Attendees",
       icon: IoPeopleSharp,
-      borderColor: "border-green-200",
-      iconColor: "text-green-200",
+      borderColor: "border-green-300",
+      iconColor: "text-green-300",
     },
     {
       number: "120",
@@ -42,8 +42,8 @@ export const AboutUs = () => {
       number: "10",
       label: "Workshops",
       icon: GrWorkshop,
-      borderColor: "border-pink-200",
-      iconColor: "text-pink-200",
+      borderColor: "border-pink-300",
+      iconColor: "text-pink-300",
     },
     {
       number: "800",
