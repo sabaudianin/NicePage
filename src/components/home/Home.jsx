@@ -9,6 +9,7 @@ import { TechCards } from "../technology/TechCards";
 import { Speakers } from "../speakers/Speakers.jsx";
 import { Sponsors } from "../sponsors/Sponsors.jsx";
 import { Recomendation } from "../recomendation/Recomendation.jsx";
+import { Summary } from "../Summary/Summary.jsx";
 
 export const Home = () => {
   const location = useLocation();
@@ -55,6 +56,9 @@ export const Home = () => {
           className=""
         >
           <Recomendation />
+        </section>
+        <section>
+          <Summary />
         </section>
       </main>
     </>

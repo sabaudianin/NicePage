@@ -5,20 +5,7 @@ export const BuyTicketButton = () => {
 
       <button
         onClick={() => console.log("Buy ticket")}
-        className="
-            relative 
-            z-1
-            w-full
-            px-20
-            py-2
-            bg-orange-400
-            text-white
-            rounded
-            hover:bg-orange-600
-            text-lg
-            font-bold
-            animate-bgPulse
-            "
+        className="relative z-1 w-full px-20 py-2 bg-orange-400 text-white rounded hover:bg-orange-600 text-lg lg:text-2xl font-bold animate-bgPulse"
       >
         Buy Tickets
       </button>

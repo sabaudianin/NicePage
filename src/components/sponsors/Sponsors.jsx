@@ -1,8 +1,8 @@
 import { BecomeASponsor } from "../../elements/BecomeSponsor";
 export const Sponsors = () => {
   return (
-    <section className="">
-      <div className="bg-white py-12 ">
+    <section className="bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200">
+      <div className="py-12 ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-center text-xl lg:text-3xl font-semibold text-gray-900">
             CodersBros Partnerships
@@ -46,7 +46,7 @@ export const Sponsors = () => {
           </div>
         </div>
       </div>
-      <div className="py-10 bg-white">
+      <div className="py-10">
         <BecomeASponsor />
       </div>
     </section>
