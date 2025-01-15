@@ -4,27 +4,30 @@ import { TopicCard } from "./TopicCard";
 export const TechCards = () => {
   return (
     <section className="py-10">
-      <article className="font-sans ">
-        <h2 className="text-3xl xl:text-4xl font-bold text-center text-shadow dark:text-shadow-dark ">
-          <div className="flex justify-center items-center gap-2 ">
-            <GiOnTarget />
-            <GiOnTarget />
-            <div className="rotate-y-180">
+      <article className="font-sans relative">
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-0 rounded-xl lg:w-1/2 mx-auto"></div>
+        <div className="relative z-1 p-2">
+          <h2 className="text-3xl xl:text-4xl font-bold text-center text-shadow dark:text-shadow-dark ">
+            <div className="flex justify-center items-center gap-2 ">
               <GiOnTarget />
+              <GiOnTarget />
+              <div className="rotate-y-180">
+                <GiOnTarget />
+              </div>
+              <div>
+                <GiOnTarget className="rotate-y-180" />
+              </div>
             </div>
-            <div>
-              <GiOnTarget className="rotate-y-180" />
-            </div>
-          </div>
-          Tracks & Focus Areas
-        </h2>
-        <p className="px-4 text-lg font-semibold text-center">
-          Discover the technologies, tools, and trends shaping the future of
-          development.
-        </p>
+            Tracks & Focus Areas
+          </h2>
+          <p className="text-lg font-semibold text-center">
+            Discover the technologies, tools, and trends shaping the future of
+            development.
+          </p>
+        </div>
       </article>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-2">
         <TopicCard
           title="Frontend & Design Excellence"
           description="Technologies and tools for building interactive and visually

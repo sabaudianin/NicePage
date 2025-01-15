@@ -35,7 +35,7 @@ export const Cta = () => {
       </main>
 
       <aside className="hidden lg:flex lg:w-1/2 justify-center items-center relative z-10">
-        <div className=" p-20 shadow-lg text-center">
+        <div className="p-20 shadow-lg text-center">
           <Countdown />
         </div>
       </aside>
