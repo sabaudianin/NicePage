@@ -1,9 +1,9 @@
 import React from "react";
-import { SiCodersrank } from "react-icons/si";
+
 import { IoIosLogIn } from "react-icons/io";
 import { ThemeToggle } from "../../theme/ThemeToggle";
 import { MenuHamburger } from "./MenuHamburger";
-import { Link } from "react-router-dom";
+
 import { NavLinks } from "./NavLinks";
 import { Logo } from "../../elements/Logo";
 
