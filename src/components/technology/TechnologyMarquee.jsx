@@ -22,8 +22,8 @@ import { BiLogoVisualStudio } from "react-icons/bi";
 
 export const TechnologyMarquee = () => {
   return (
-    <section className="bg-indigo-100 dark:bg-neutral-900">
-      <h2 className="font-rubik text-black text-5xl text-center text-pink-500">
+    <section className="bg-indigo-100 dark:bg-neutral-900 lg:py-10">
+      <h2 className="font-rubik text-black text-5xl text-center text-pink-500 ">
         Technology:
       </h2>
       <div className="relative w-full overflow-hidden py-20 text-6xl">

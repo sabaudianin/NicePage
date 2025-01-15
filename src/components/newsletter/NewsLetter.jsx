@@ -6,7 +6,7 @@ export const NewsLetter = () => {
   const { register, handleSubmit, errors, onSubmit } = useNewsletterForm();
 
   return (
-    <section className="py-16 bg-indigo-100 dark:bg-neutral-900 flex justify-center items-center flex-col ">
+    <section className="py-16 lg:py-24 bg-indigo-100 dark:bg-neutral-900 flex justify-center items-center flex-col ">
       <div className="relative ">
         <div className="absolute top-5 md:left-5 bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-400 w-full h-full px-15 py-10 rounded-tl-xl rounded-br-xl"></div>
         <div className="absolute -top-5 md:-left-5 bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-400 w-full h-full px-15 py-10 rounded-tl-xl rounded-br-xl"></div>

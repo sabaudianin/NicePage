@@ -6,7 +6,7 @@ import { DecorCircles } from "../../elements/DecorCircles.jsx";
 
 export const Speakers = () => {
   return (
-    <section className="p-4">
+    <section className="p-4 lg:py-20">
       <DecorLine />
       <h2 className="text-3xl xl:text-4xl font-bold text-center text-shadow dark:text-shadow-fff">
         Meet Our Lecturers :

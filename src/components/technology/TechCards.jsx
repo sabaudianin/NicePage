@@ -3,7 +3,7 @@ import { TopicCard } from "./TopicCard";
 
 export const TechCards = () => {
   return (
-    <section className="py-10">
+    <section className="py-10 lg:py-20">
       <article className="font-sans relative">
         <div className="absolute inset-0 bg-black bg-opacity-50 z-0 rounded-xl lg:w-1/2 mx-auto"></div>
         <div className="relative z-1 p-2">

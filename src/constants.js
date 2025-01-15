@@ -5,7 +5,7 @@ export const speakers = [
     img: "/images/photo.jpg",
   },
   {
-    name: "Bob Rafalski",
+    name: "Bob Rafalsky",
     about: "CEO CodersBros",
     img: "/images/bw.jpg",
   },

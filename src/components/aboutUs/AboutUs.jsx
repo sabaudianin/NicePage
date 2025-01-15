@@ -14,8 +14,8 @@ export const AboutUs = () => {
       number: "3rd",
       label: "Edition",
       icon: LiaBirthdayCakeSolid,
-      borderColor: "border-orange-300",
-      iconColor: "text-orange-300",
+      borderColor: "border-orange-400",
+      iconColor: "text-orange-600",
     },
     {
       number: "200",
@@ -28,8 +28,8 @@ export const AboutUs = () => {
       number: "3000",
       label: "Attendees",
       icon: IoPeopleSharp,
-      borderColor: "border-green-300",
-      iconColor: "text-green-300",
+      borderColor: "border-green-400",
+      iconColor: "text-green-400",
     },
     {
       number: "120",
@@ -42,8 +42,8 @@ export const AboutUs = () => {
       number: "10",
       label: "Workshops",
       icon: GrWorkshop,
-      borderColor: "border-pink-300",
-      iconColor: "text-pink-300",
+      borderColor: "border-pink-400",
+      iconColor: "text-pink-400",
     },
     {
       number: "800",
@@ -55,8 +55,8 @@ export const AboutUs = () => {
   ];
 
   return (
-    <section className="flex justify-center items-center flex-col text-shadow-lg dark:text-shadow-fff">
-      <h2 className="text-5xl font-bold mb-8 text-center">
+    <section className="flex justify-center items-center flex-col text-shadow-lg dark:text-shadow-fff lg:py-20">
+      <h2 className="text-5xl font-bold mb-16 text-center">
         Convent <span className="font-rubik text-center">CodingBros</span>
       </h2>
 

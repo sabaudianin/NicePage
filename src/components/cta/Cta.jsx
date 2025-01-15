@@ -6,7 +6,7 @@ import { BecomeASponsor } from "../../elements/BecomeSponsor";
 
 export const Cta = () => {
   return (
-    <section className="relative bg-[url('/images/cta.jpg')] bg-cover bg-center text-white flex flex-col lg:flex-row items-center justify-between">
+    <section className="relative bg-[url('/images/cta.jpg')] bg-cover bg-center flex flex-col lg:flex-row items-center justify-between text-white lg:py-20">
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
       <main className="relative flex flex-col justify-between items-center lg:w-1/2 font-poppins z-1">
         <div className="mt-10 p-6 lg:p-10 font-extrabold">
