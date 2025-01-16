@@ -51,10 +51,22 @@ module.exports = {
           "66%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-25%)" },
         },
+        gradientBackground: {
+          "0%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+          },
+        },
       },
       animation: {
         bgPulse: "bgPulse 3s infinite",
         iconCarusel: "iconCarusel 60s linear infinite",
+        gradientBackground: "gradientBackground 6s ease infinite",
       },
     },
   },
