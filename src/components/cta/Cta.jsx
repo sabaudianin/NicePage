@@ -21,7 +21,7 @@ export const Cta = () => {
             Join Poland's premier event for web developers!
           </h3>
         </div>
-        <div className="flex flex-col gap-3 p-2">
+        <div className="flex flex-col gap-3 p-2 w-full">
           <BuyTicketButton />
           <BecomeASponsor />
           <JoinAsASpeaker />
