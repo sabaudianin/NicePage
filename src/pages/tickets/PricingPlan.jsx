@@ -3,7 +3,6 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 export const PricingPlan = ({
   name,
   price,
-  period,
   description,
   features,
   buttonColor,
@@ -28,10 +27,6 @@ export const PricingPlan = ({
 
         <p className="text-3xl font-bold text-gray-900 dark:text-gray-50 lg:text-4xl">
           {price}
-          <span className="text-sm font-normal text-gray-700 dark:text-gray-300">
-            {" "}
-            {period}
-          </span>
         </p>
         <p className="text-base text-gray-700 dark:text-gray-300">
           {description}

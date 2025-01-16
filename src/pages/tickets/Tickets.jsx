@@ -1,15 +1,15 @@
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import { PricingPlan } from "./PricingPlan";
+import { Logo } from "../../elements/Logo";
 
 export const Tickets = () => {
   return (
-    <section className="bg-white dark:bg-gray-950">
-      <div className="flex flex-col items-center mx-auto max-w-5xl px-6 py-32 gap-16 lg:max-w-7xl">
-        <div className="mx-auto max-w-lg text-center text-gray-900 dark:text-gray-50">
-          <h2 className="text-3xl font-bold mb-3 lg:text-4xl">
-            Coding Bros Pricing Plans
-          </h2>
-          <p className="text-base">
+    <section className="bg-white dark:bg-gray-950 max-w-custom-3xl py-44">
+      <div className="flex flex-col items-center mx-auto px-6 py-32 gap-16 ">
+        <div className="mx-auto  text-center text-gray-900 dark:text-gray-50">
+          <Logo />
+
+          <p className="text-xl lg:text-3xl">
             Choose a plan that fits your needs and join us for an unforgettable
             coding experience.
           </p>
@@ -24,7 +24,6 @@ export const Tickets = () => {
               "Full access to all stages and presentations during the event",
               "Access to the chillout zone, attractions, food trucks, and networking opportunities with our partners",
               "A comprehensive guide to the Code Europe festival",
-              "Email Support",
               "Access to Free Workshops",
             ]}
             buttonColor="bg-green-500 hover:bg-green-600"
@@ -39,9 +38,8 @@ export const Tickets = () => {
               "Full access to all stages and presentations during the event",
               "Access to the chillout zone, attractions, food trucks, and networking opportunities with our partners",
               "A comprehensive guide to the Code Europe festival",
-              "Email Support",
               "Access to Free Workshops",
-              "Invitation to the official Code Europe Party ",
+              "Invitation to the official Code Europe Party",
             ]}
             badge="Most Popular"
             badgeColor="bg-indigo-500 text-white"
@@ -52,13 +50,11 @@ export const Tickets = () => {
           <PricingPlan
             name="VIP"
             price="$75"
-            period="/ month"
             description="For professionals who need top-tier tools and support."
             features={[
               "Full access to all stages and presentations during the event",
               "Access to the chillout zone, attractions, food trucks, and networking opportunities with our partners",
               "A comprehensive guide to the Code Europe festival",
-              "Email Support",
               "Access to Free Workshops",
               "Invitation to the official Code Europe Party with an open bar",
               "Lunch voucher for each day of Code Europe",
@@ -71,7 +67,7 @@ export const Tickets = () => {
           />
         </div>
 
-        <p className="mx-auto max-w-lg text-sm text-center text-gray-500">
+        <p className="mx-auto text-lg text-center text-gray-500">
           No credit card required. Cancel anytime.
         </p>
       </div>

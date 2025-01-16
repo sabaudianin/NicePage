@@ -81,10 +81,10 @@ module.exports = {
           textShadow: "1px 1px 1px #fff",
         },
         ".text-shadow-lg": {
-          textShadow: "2px 2px 8px #000",
+          textShadow: "2px 2px 2px #000",
         },
         ".text-shadow-fff": {
-          textShadow: "2px 2px 8px #fff",
+          textShadow: "2px 2px 2px #fff",
         },
         ".rotate-x-180": {
           transform: "rotateX(180deg)",
