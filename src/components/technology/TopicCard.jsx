@@ -3,7 +3,7 @@ import { FcOk } from "react-icons/fc";
 export const TopicCard = ({ title, description, topics, bgColor }) => {
   return (
     <section
-      className={`p-8 rounded-xl hover:scale-105 hover:shadow-lg transition-transform duration-300 ${bgColor} text-gray-700`}
+      className={`p-8 rounded-xl hover:scale-103 hover:shadow-lg transition-transform duration-300 ${bgColor} text-gray-700`}
     >
       <h3 className="text-2xl lg:text-3xl font-poppins font-semibold text-shadow-fff mb-3 text-center">
         {title}

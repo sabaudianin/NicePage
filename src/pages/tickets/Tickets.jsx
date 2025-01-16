@@ -1,82 +1,80 @@
+import { IoCheckmarkCircleSharp } from "react-icons/io5";
+import { PricingPlan } from "./PricingPlan";
+
 export const Tickets = () => {
   return (
-    <div className="h-screen flex flex-col gap-2 items-center justify-around bg-green-100">
-      <h1 className="text-3xl">Welcome to Tickets Page</h1>
-      <div className="relative inline-block">
-        <div className="absolute w-64 h-16 bg-pink-500 -translate-y-2 translate-x-2 rounded-md"></div>
-
-        <div className="relative w-64 h-16 bg-blue-500 flex items-center justify-center text-white font-bold rounded-md">
-          Dwa-trzy-cztery
+    <section className="bg-white dark:bg-gray-950">
+      <div className="flex flex-col items-center mx-auto max-w-5xl px-6 py-32 gap-16 lg:max-w-7xl">
+        <div className="mx-auto max-w-lg text-center text-gray-900 dark:text-gray-50">
+          <h2 className="text-3xl font-bold mb-3 lg:text-4xl">
+            Coding Bros Pricing Plans
+          </h2>
+          <p className="text-base">
+            Choose a plan that fits your needs and join us for an unforgettable
+            coding experience.
+          </p>
         </div>
-      </div>
-      <div
-        className="
-        relative inline-block z-0
-        bg-blue-500 text-white font-bold
-        px-6 py-3 rounded-md
-        before:content-[''] 
-        before:absolute 
-        before:z-[-1] 
-        before:bg-red-500 
-        before:rounded-md 
-        before:top-2 
-        before:left-2
-        before:w-full
-        before:h-full
-      "
-      >
-        Pseudoelement w Tailwindzie
-      </div>
-      <div
-        className="
-        relative inline-block 
-        bg-blue-500 
-        text-white 
-        font-bold
-        px-6 py-3 
-        rounded-md
-        z-0
-        before:content-[''] 
-        before:absolute 
-        before:z-[-1] 
-        before:bg-red-500 
-        before:rounded-md 
-        before:top-2 
-        before:left-2
-        before:w-full
-        before:h-full
-      "
-      >
-        Tekst
-      </div>
 
-      <div className="relative inline-block">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/4 -translate-y-1/4 w-40 h-40 bg-red-500 rounded-full z-0"></div>
-
-        <div
-          className="
-      relative 
-      w-40 h-40
-      bg-blue-500 
-      text-white 
-      font-bold 
-      flex items-center justify-center
-      rounded-md
-      z-10
-    "
-        >
-          o to chodzi
+        <div className="w-full flex flex-col gap-6 lg:flex-row lg:justify-between">
+          <PricingPlan
+            name="Student"
+            price="$25"
+            description="Perfect for studentss starting their coding journey."
+            features={[
+              "Full access to all stages and presentations during the event",
+              "Access to the chillout zone, attractions, food trucks, and networking opportunities with our partners",
+              "A comprehensive guide to the Code Europe festival",
+              "Email Support",
+              "Access to Free Workshops",
+            ]}
+            buttonColor="bg-green-500 hover:bg-green-600"
+            textColor="text-green-500"
+            buttonText="Get Started"
+          />
+          <PricingPlan
+            name="Business"
+            price="$50"
+            description="Ideal for developers looking to scale their projects."
+            features={[
+              "Full access to all stages and presentations during the event",
+              "Access to the chillout zone, attractions, food trucks, and networking opportunities with our partners",
+              "A comprehensive guide to the Code Europe festival",
+              "Email Support",
+              "Access to Free Workshops",
+              "Invitation to the official Code Europe Party ",
+            ]}
+            badge="Most Popular"
+            badgeColor="bg-indigo-500 text-white"
+            buttonColor="bg-indigo-500 hover:bg-indigo-600"
+            textColor="text-indigo-500"
+            buttonText="Choose Plan"
+          />
+          <PricingPlan
+            name="VIP"
+            price="$75"
+            period="/ month"
+            description="For professionals who need top-tier tools and support."
+            features={[
+              "Full access to all stages and presentations during the event",
+              "Access to the chillout zone, attractions, food trucks, and networking opportunities with our partners",
+              "A comprehensive guide to the Code Europe festival",
+              "Email Support",
+              "Access to Free Workshops",
+              "Invitation to the official Code Europe Party with an open bar",
+              "Lunch voucher for each day of Code Europe",
+            ]}
+            badge="VIP Access"
+            badgeColor="bg-pink-500 text-white"
+            buttonColor="bg-pink-500 hover:bg-pink-600"
+            textColor="text-pink-500"
+            buttonText="Join VIP"
+          />
         </div>
-      </div>
 
-      <div
-        className="relative before:content-[''] before:absolute before:bg-red-500 before:rounded-full before:w-40 before:h-40 before:z-0 before:top-full before:left-full before:-translate-x-1/2 before:-translate-y-1/2
-  "
-      >
-        <div className="relative w-40 h-40 bg-blue-500 text-white font-bold flex items-center justify-center rounded-md z-10">
-          o to chodzi2
-        </div>
+        <p className="mx-auto max-w-lg text-sm text-center text-gray-500">
+          No credit card required. Cancel anytime.
+        </p>
       </div>
-    </div>
+    </section>
   );
 };

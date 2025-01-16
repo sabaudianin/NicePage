@@ -26,14 +26,16 @@ export const Home = () => {
         <section>
           <Cta />
         </section>
-        <section
-          className="my-10"
-          id="section1"
-        >
+        <section className="my-10">
           <AboutUs />
         </section>
-        <NewsLetter />
-        <section className="bg-[url('/images/code.jpg')] bg-fixed bg-cover">
+        <section id="section4">
+          <NewsLetter />
+        </section>
+        <section
+          id="section1"
+          className="bg-[url('/images/code.jpg')] bg-fixed bg-cover"
+        >
           <TechnologyMarquee />
           <TechCards />
         </section>

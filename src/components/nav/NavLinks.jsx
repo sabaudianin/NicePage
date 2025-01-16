@@ -5,10 +5,10 @@ import { BuyTicketButton } from "../../elements/BuyTicketButton";
 
 export const NavLinks = ({ className }) => {
   const scrollLinks = [
-    { to: "section1", label: "Link1" },
-    { to: "section2", label: "Link 2" },
-    { to: "section3", label: "Link 3" },
-    { to: "section4", label: "Link 4" },
+    { to: "section1", label: "Technology" },
+    { to: "section2", label: "Lecturers" },
+    { to: "section3", label: "Partnership" },
+    { to: "section4", label: "NewsLetter" },
   ];
 
   const navigate = useNavigate();
