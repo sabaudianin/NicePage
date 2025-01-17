@@ -1,4 +1,5 @@
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 export const PricingPlan = ({
   name,
@@ -10,6 +11,7 @@ export const PricingPlan = ({
   buttonText,
   badge,
   badgeColor,
+  planOption,
 }) => {
   return (
     <div className="flex flex-col gap-6 bg-slate-50 dark:bg-gray-800 shadow-lg rounded-xl p-6 lg:p-8 w-full">
@@ -33,12 +35,13 @@ export const PricingPlan = ({
         </p>
       </div>
 
-      <a
-        href="#"
-        className={`w-full px-5 py-3 rounded-lg text-white text-base text-center font-medium transition duration-250 ease-in-out ${buttonColor}`}
+      <NavLink
+        to="/buy-ticket"
+        state={{ plan: planOption }}
+        className={` btn w-full px-5 py-3 rounded-lg text-white text-base text-center font-medium transition duration-250 ease-in-out ${buttonColor}`}
       >
         {buttonText}
-      </a>
+      </NavLink>
 
       <div className="flex flex-col gap-4">
         {features.map((feature, index) => (

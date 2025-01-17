@@ -4,7 +4,7 @@ import { Logo } from "../../elements/Logo";
 
 export const Tickets = () => {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 w-full mx-auto max-w-custom-3xl py-44">
+    <section className="bg-gray-50 dark:bg-gray-900 w-full mx-auto max-w-custom-3xl mb-8">
       <div className="flex flex-col items-center mx-auto px-6 py-32 gap-16 ">
         <div className="mx-auto text-center text-gray-900 dark:text-gray-50">
           <Logo />
@@ -31,6 +31,7 @@ export const Tickets = () => {
             buttonColor="bg-green-500 hover:bg-green-600"
             textColor="text-green-500"
             buttonText="Get Started"
+            planOption={"student"}
           />
           <PricingPlan
             name="Business"
@@ -48,6 +49,7 @@ export const Tickets = () => {
             buttonColor="bg-indigo-500 hover:bg-indigo-600"
             textColor="text-indigo-500"
             buttonText="Choose Plan"
+            planOption={"business"}
           />
           <PricingPlan
             name="VIP"
@@ -66,6 +68,7 @@ export const Tickets = () => {
             buttonColor="bg-pink-500 hover:bg-pink-600"
             textColor="text-pink-500"
             buttonText="Join VIP"
+            planOption={"vip"}
           />
         </div>
 

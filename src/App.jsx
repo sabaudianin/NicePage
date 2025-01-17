@@ -23,7 +23,7 @@ export const App = () => {
               element={<Home />}
             />
             <Route
-              path="about"
+              path="/buy-ticket"
               element={<TicketForm />}
             />
             <Route
