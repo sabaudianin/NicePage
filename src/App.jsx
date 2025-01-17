@@ -6,6 +6,7 @@ import { About } from "./pages/about/About.jsx";
 import { Tickets } from "./pages/tickets/Tickets.jsx";
 import { ThemeInitializer } from "./theme/ThemeInitializer.js";
 import { NotFound } from "./utils/NotFound.jsx";
+import { TicketForm } from "./pages/tickets/TicketForm.jsx";
 
 export const App = () => {
   return (
@@ -23,7 +24,7 @@ export const App = () => {
             />
             <Route
               path="about"
-              element={<About />}
+              element={<TicketForm />}
             />
             <Route
               path="/tickets"

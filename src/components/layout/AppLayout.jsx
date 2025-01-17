@@ -6,10 +6,12 @@ import { Footer } from "../footer/Footer";
 
 export const AppLayout = () => {
   return (
-    <section className="flex justify-center bg-gray-50 dark:bg-gray-900 dark:text-white">
-      <div className="max-w-custom-3xl">
+    <section className="bg-gray-50 dark:bg-gray-900 dark:text-white ">
+      <div className="flex flex-col justify-center bg-gray-50 dark:bg-gray-900 dark:text-white min-h-screen container mx-auto px-4 max-w-custom-3xl">
         <Navigation />
-        <Outlet />
+        <main className="flex-grow">
+          <Outlet />
+        </main>
         <Footer />
       </div>
     </section>

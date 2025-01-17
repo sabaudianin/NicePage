@@ -5,8 +5,8 @@ import { NavLink } from "react-router";
 
 export const Footer = () => {
   return (
-    <footer className="bg-slate-50 dark:bg-gray-800">
-      <div className="flex flex-col items-center mx-auto max-w-screen-lg px-6 lg:max-w-[78rem] w-full">
+    <footer className="bg-slate-50 dark:bg-gray-800 shadow-light dark:shadow-dark">
+      <div className="flex flex-col items-center mx-auto  px-6  w-full">
         <div className="flex flex-col items-center gap-6 py-12 border-b border-gray-200 dark:border-gray-800 lg:flex-row lg:justify-between lg:w-full">
           <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-x-4">
             <Logo />

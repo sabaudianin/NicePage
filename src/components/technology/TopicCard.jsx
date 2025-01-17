@@ -15,7 +15,7 @@ export const TopicCard = ({ title, description, topics, bgColor }) => {
         {description}
       </p>
       <ul className="space-y-1 relative">
-        <div className="absolute inset-0 z-10 w-full p-16 bg-black bg-opacity-20 rounded-xl"></div>
+        <div className="absolute inset-0 z-10 w-full p-8 bg-black bg-opacity-10 rounded-xl"></div>
 
         {topics.map((item, index) => (
           <li

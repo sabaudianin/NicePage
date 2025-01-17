@@ -33,8 +33,6 @@ export const NavLinks = ({ className }) => {
           {link.label}
         </button>
       ))}
-
-      <BuyTicketButton />
     </div>
   );
 };

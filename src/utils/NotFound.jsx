@@ -3,7 +3,7 @@ import { FaHome } from "react-icons/fa";
 
 export const NotFound = () => {
   return (
-    <section className="h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-50 p-6">
+    <section className="h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-50 p-6 ">
       <h2 className="text-4xl lg:text-6xl font-bold text-indigo-500 mb-4">
         Oops!
       </h2>

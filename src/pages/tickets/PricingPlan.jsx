@@ -12,13 +12,13 @@ export const PricingPlan = ({
   badgeColor,
 }) => {
   return (
-    <div className="flex flex-col gap-6 bg-gray-50 dark:bg-gray-900 shadow-lg rounded-lg p-6 lg:p-8 w-full">
+    <div className="flex flex-col gap-6 bg-slate-50 dark:bg-gray-800 shadow-lg rounded-xl p-6 lg:p-8 w-full">
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
-          <p className={`text-lg font-bold ${textColor}`}>{name}</p>
+          <p className={`text-xl font-bold ${textColor}`}>{name}</p>
           {badge && (
             <span
-              className={`px-2 py-1 text-xs font-medium rounded-full ${badgeColor}`}
+              className={`px-4 py-2 text-sm font-medium rounded-xl ${badgeColor}`}
             >
               {badge}
             </span>
@@ -46,7 +46,7 @@ export const PricingPlan = ({
             key={index}
             className="flex items-center gap-3"
           >
-            <IoCheckmarkCircleSharp className="text-blue-600 text-xl" />
+            <IoCheckmarkCircleSharp className="text-green-600 text-xl" />
             <p className="text-base text-gray-900 dark:text-gray-50">
               {feature}
             </p>
