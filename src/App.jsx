@@ -7,6 +7,8 @@ import { Tickets } from "./pages/tickets/Tickets.jsx";
 import { ThemeInitializer } from "./theme/ThemeInitializer.js";
 import { NotFound } from "./utils/NotFound.jsx";
 import { TicketForm } from "./pages/tickets/TicketForm.jsx";
+import { SponsorForm } from "./pages/SponsorForm/SponsorForm.jsx";
+import { SpeakerForm } from "./pages/speakerForm/SpeakerForm.jsx";
 
 export const App = () => {
   return (
@@ -29,6 +31,14 @@ export const App = () => {
             <Route
               path="/tickets"
               element={<Tickets />}
+            />
+            <Route
+              path="/sponsors"
+              element={<SponsorForm />}
+            />
+            <Route
+              path="/speakers"
+              element={<SpeakerForm />}
             />
           </Route>
           <Route
