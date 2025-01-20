@@ -14,7 +14,7 @@ export const addDocument = async (collectionName, data) => {
   }
 };
 
-export const CheckEmailInDb = async (collectionName, email) => {
+export const checkEmailInDb = async (collectionName, email) => {
   try {
     const colRef = collection(db, collectionName);
     //query to find field 'email'==email
