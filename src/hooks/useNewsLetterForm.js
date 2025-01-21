@@ -30,7 +30,7 @@ export const useNewsletterForm = () => {
       return;
     }
     await dispatch(addEmail(data.email));
-    resetSuccess();
+    dispatch(resetSuccess());
     reset();
   };
 

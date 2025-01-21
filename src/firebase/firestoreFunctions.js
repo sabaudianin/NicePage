@@ -18,7 +18,7 @@ export const checkEmailInDb = async (collectionName, email) => {
   try {
     const colRef = collection(db, collectionName);
     //query to find field 'email'==email
-    const q = query(colRef, where("email" == email));
+    const q = query(colRef, where("email", "==", email));
     const snapshot = await getDocs(q);
     return !snapshot.empty;
     //if snapshot.empty==false => email exist
@@ -27,3 +27,5 @@ export const checkEmailInDb = async (collectionName, email) => {
     throw error;
   }
 };
+
+console.log("DB object: ", db);
