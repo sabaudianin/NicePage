@@ -31,7 +31,7 @@ export const NewsLetter = () => {
             <input
               type="email"
               placeholder="Write Your email"
-              aria-label="Write Your email"
+              // aria-label="Write Your email"
               {...register("email")}
               className="p-4 font-semibold "
             />
