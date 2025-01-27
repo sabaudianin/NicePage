@@ -1,21 +1,24 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { addDocument, checkEmailInDb } from "../../firebase/firestoreFunctions";
 
-export const checkEmailExist = createAsyncThunk("checkEmail", async (email) => {
-  const exist = await checkEmailInDb("newsletter", email);
-  return { email, exist };
-});
+export const checkTicketExist = createAsyncThunk(
+  "checkTicketExist",
+  async (email) => {
+    const exist = await checkEmailInDb("tickets", email);
+    return { email, exist };
+  }
+);
 
-export const addEmail = createAsyncThunk("addEmail", async (email) => {
-  const docId = await addDocument("newsletter", {
+export const addTicket = createAsyncThunk("addTicket", async (email) => {
+  const docId = await addDocument("tickets", {
     email,
     createdAt: new Date().toISOString(),
   });
   return { email, docId };
 });
 
-const newsletterSlice = createSlice({
-  name: "newsletter",
+const ticketsSlice = createSlice({
+  name: "tickets",
   initialState: {
     loading: false,
     error: null,
@@ -30,34 +33,34 @@ const newsletterSlice = createSlice({
   extraReducers: (builder) => {
     //checkEmail
     builder
-      .addCase(checkEmailExist.pending, (state) => {
+      .addCase(checkTicketExist.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(checkEmailExist.fulfilled, (state, action) => {
+      .addCase(checkTicketExist.fulfilled, (state, action) => {
         state.loading = false;
         state.exist = action.payload.exist;
       })
-      .addCase(checkEmailExist.rejected, (state, action) => {
+      .addCase(checkTicketExist.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })
-      //addEmail
-      .addCase(addEmail.pending, (state) => {
+      //addTicket
+      .addCase(addTicket.pending, (state) => {
         state.loading = true;
         state.error = null;
         state.added = false;
       })
-      .addCase(addEmail.fulfilled, (state, action) => {
+      .addCase(addTicket.fulfilled, (state, action) => {
         state.loading = false;
         state.added = true;
       })
-      .addCase(addEmail.rejected, (state, action) => {
+      .addCase(addTicket.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
   },
 });
 
-export const { resetSuccess } = newsletterSlice.actions;
-export default newsletterSlice.reducer;
+export const { resetSuccess } = ticketsSlice.actions;
+export default ticketsSlice.reducer;
