@@ -3,6 +3,7 @@ import themeReducer from "./slices/themeSlice";
 import userReducer from "./slices/userSlice";
 import newsletterReducer from "./slices/emailSlice";
 import sponsorReducer from "./slices/sponsorSlice";
+import speakersReducer from "./slices/speakerSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     user: userReducer,
     newsletter: newsletterReducer,
     sponsors: sponsorReducer,
+    speakers: speakersReducer,
   },
 });

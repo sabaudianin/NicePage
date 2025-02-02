@@ -14,10 +14,10 @@ export const SponsorForm = () => {
   } = useSponsorForm();
 
   return (
-    <section className="flex justify-center items-center py-8 lg:py-16 bg-white dark:bg-gray-800">
-      <div className="w-full max-w-2xl px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-5xl font-bold text-orange-500 mb-4">
+    <section className="flex justify-center items-center py-2 lg:py-12">
+      <div className="w-full lg:px-8 ">
+        <div className="text-center mb-4 lg:mb-8">
+          <h2 className="text-3xl lg:text-6xl font-bold m-4 text-orange-500">
             Become a Sponsor
           </h2>
           <p className="text-gray-700 dark:text-gray-300 text-lg">
@@ -108,6 +108,9 @@ export const SponsorForm = () => {
             </p>
           )}
         </form>
+        <p className="mt-8 text-center  text-gray-500">
+          We will review your application and contact you with further details.
+        </p>
       </div>
     </section>
   );

@@ -1,20 +1,29 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { addDocument, checkEmailInDb } from "../../firebase/firestoreFunctions";
 
-export const checkEmailExist = createAsyncThunk("checkEmail", async (email) => {
-  const exist = await checkEmailInDb("speakers", email);
-  return { email, exist };
-});
+export const checkSpeakerEmailExist = createAsyncThunk(
+  "speakers/checkEmail",
+  async (email) => {
+    const exist = await checkEmailInDb("speakers", email);
+    return { email, exist };
+  }
+);
 
-export const addEmail = createAsyncThunk("addEmail", async (email) => {
-  const docId = await addDocument("speakers", {
-    email,
-    createdAt: new Date().toISOString(),
-  });
-  return { email, docId };
-});
+export const addSpeaker = createAsyncThunk(
+  "speakers/addSpeaker",
+  async (data) => {
+    const docId = await addDocument("speakers", {
+      email: data.email,
+      fullName: data.name,
+      aboutYourself: data.aboutYourself,
+      experience: data.experience,
+      createdAt: new Date().toISOString(),
+    });
+    return { ...data, docId };
+  }
+);
 
-const speakersSlice = createSlice({
+const speakerSlice = createSlice({
   name: "speakers",
   initialState: {
     loading: false,
@@ -29,34 +38,34 @@ const speakersSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(checkEmailExist.pending, (state) => {
+      .addCase(checkSpeakerEmailExist.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(checkEmailExist.fulfilled, (state, action) => {
+      .addCase(checkSpeakerEmailExist.fulfilled, (state, action) => {
         state.loading = false;
         state.exist = action.payload.exist;
       })
-      .addCase(checkEmailExist.rejected, (state, action) => {
+      .addCase(checkSpeakerEmailExist.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })
 
-      .addCase(addEmail.pending, (state) => {
+      .addCase(addSpeaker.pending, (state) => {
         state.loading = true;
         state.error = null;
         state.added = false;
       })
-      .addCase(addEmail.fulfilled, (state, action) => {
+      .addCase(addSpeaker.fulfilled, (state, action) => {
         state.loading = false;
         state.added = true;
       })
-      .addCase(addEmail.rejected, (state, action) => {
+      .addCase(addSpeaker.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
   },
 });
 
-export const { resetSuccess } = newsletterSlice.actions;
-export default newsletterSlice.reducer;
+export const { resetSuccess } = speakerSlice.actions;
+export default speakerSlice.reducer;

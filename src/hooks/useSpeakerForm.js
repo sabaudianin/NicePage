@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { newsletterSchema } from "../validations/newsletterSchema";
+import { speakerSchema } from "../validations/speakerSchema";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  checkEmailExist,
-  addEmail,
+  checkSpeakerEmailExist,
+  addSpeaker,
   resetSuccess,
-} from "../redux/slices/emailSlice";
+} from "../redux/slices/speakerSlice";
 
 export const useSpeakerForm = () => {
   const {
@@ -15,21 +15,22 @@ export const useSpeakerForm = () => {
     formState: { errors },
     reset,
   } = useForm({
-    resolver: zodResolver(newsletterSchema),
+    resolver: zodResolver(speakerSchema),
   });
 
   const dispatch = useDispatch();
   const { loading, error, exist, added } = useSelector(
-    (state) => state.newsletter
+    (state) => state.speakers
   );
 
   const onSubmit = async (data) => {
     console.log(data);
-    const result = await dispatch(checkEmailExist(data.email));
-    if (result.payload.exist) {
+    const result = await dispatch(checkSpeakerEmailExist(data.email));
+
+    if (result.payload && result.payload.exist) {
       return;
     }
-    await dispatch(addEmail(data.email));
+    await dispatch(addSpeaker(data));
     dispatch(resetSuccess());
     reset();
   };
