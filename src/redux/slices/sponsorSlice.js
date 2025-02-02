@@ -1,21 +1,28 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { addDocument, checkEmailInDb } from "../../firebase/firestoreFunctions";
 
-export const checkEmailExist = createAsyncThunk("checkEmail", async (email) => {
-  const exist = await checkEmailInDb("newsletter", email);
-  return { email, exist };
-});
+// check email in collection "sponsors"
+export const checkEmailExist = createAsyncThunk(
+  "sponsors/checkEmail",
+  async (email) => {
+    const exist = await checkEmailInDb("sponsors", email);
+    return { email, exist };
+  }
+);
 
-export const addEmail = createAsyncThunk("addEmail", async (email) => {
-  const docId = await addDocument("newsletter", {
-    email,
+// add sponsors data, object (email, name,info)
+export const addData = createAsyncThunk("sponsors/addData", async (data) => {
+  const docId = await addDocument("sponsors", {
+    email: data.email,
+    fullName: data.name,
+    info: data.additionalInfo,
     createdAt: new Date().toISOString(),
   });
-  return { email, docId };
+  return { ...data, docId };
 });
 
-const newsletterSlice = createSlice({
-  name: "newsletter",
+const sponsorSlice = createSlice({
+  name: "sponsors",
   initialState: {
     loading: false,
     error: null,
@@ -28,7 +35,7 @@ const newsletterSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    //checkEmail
+    // check email exist or not
     builder
       .addCase(checkEmailExist.pending, (state) => {
         state.loading = true;
@@ -42,22 +49,22 @@ const newsletterSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       })
-      //addEmail
-      .addCase(addEmail.pending, (state) => {
+      // add email to db
+      .addCase(addData.pending, (state) => {
         state.loading = true;
         state.error = null;
         state.added = false;
       })
-      .addCase(addEmail.fulfilled, (state, action) => {
+      .addCase(addData.fulfilled, (state, action) => {
         state.loading = false;
         state.added = true;
       })
-      .addCase(addEmail.rejected, (state, action) => {
+      .addCase(addData.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
   },
 });
 
-export const { resetSuccess } = newsletterSlice.actions;
-export default newsletterSlice.reducer;
+export const { resetSuccess } = sponsorSlice.actions;
+export default sponsorSlice.reducer;

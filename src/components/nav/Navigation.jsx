@@ -1,6 +1,5 @@
 import React from "react";
 
-import { IoIosLogIn } from "react-icons/io";
 import { ThemeToggle } from "../../theme/ThemeToggle";
 import { MenuHamburger } from "./MenuHamburger";
 
@@ -13,7 +12,6 @@ export const Navigation = () => {
       <Logo />
       <div className="flex items-center gap-1">
         <ThemeToggle />
-        <IoIosLogIn />
       </div>
 
       <div className="hidden md:flex gap-4">

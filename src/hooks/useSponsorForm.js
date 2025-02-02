@@ -1,35 +1,39 @@
+// src/hooks/useSponsorForm.js
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { newsletterSchema } from "../validations/newsletterSchema";
+import { sponsorSchema } from "../validations/sponsorSchema";
 import { useDispatch, useSelector } from "react-redux";
 import {
   checkEmailExist,
-  addEmail,
+  addData,
   resetSuccess,
-} from "../redux/slices/emailSlice";
+} from "../redux/slices/sponsorSlice";
 
-export const useNewsletterForm = () => {
+export const useSponsorForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({
-    resolver: zodResolver(newsletterSchema),
+    resolver: zodResolver(sponsorSchema),
   });
 
   const dispatch = useDispatch();
   const { loading, error, exist, added } = useSelector(
-    (state) => state.newsletter
+    (state) => state.sponsors
   );
 
   const onSubmit = async (data) => {
     console.log(data);
+
     const result = await dispatch(checkEmailExist(data.email));
-    if (result.payload.exist) {
+    if (result.payload && result.payload.exist) {
+      //Maybe add alert??
       return;
     }
-    await dispatch(addEmail(data.email));
+
+    await dispatch(addData(data));
     dispatch(resetSuccess());
     reset();
   };

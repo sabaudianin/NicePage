@@ -12,22 +12,17 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase.js";
 
 export const App = () => {
-  const testFirestoreConnection = async () => {
-    try {
-      const colRef = collection(db, "newsletter"); // podaj istniejącą kolekcję
-      const snapshot = await getDocs(colRef);
-      const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      console.log("Firestore connection successful. Data:", data);
-    } catch (error) {
-      console.error("Error connecting to Firestore:", error);
-    }
-  };
+  // const testFirestoreConnection = async () => {
+  //   try {
+  //     const colRef = collection(db, "newsletter");
+  //     const snapshot = await getDocs(colRef);
+  //     const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  //     console.log("Firestore connection successful. Data:", data);
+  //   } catch (error) {
+  //     console.error("Error connecting to Firestore:", error);
+  //   }
+  // };
 
-  testFirestoreConnection();
-  console.log("Firebase config from env:", {
-    apiKey: process.env.REACT_APP_API_KEY,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-  });
   return (
     <>
       <ThemeInitializer />

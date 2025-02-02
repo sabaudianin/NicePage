@@ -23,9 +23,9 @@ export const checkEmailInDb = async (collectionName, email) => {
     return !snapshot.empty;
     //if snapshot.empty==false => email exist
   } catch (error) {
-    console.error("error checking Email", error);
+    console.error("Error checking Email", error);
     throw error;
   }
 };
 
-console.log("DB object: ", db);
+// console.log("DB object: ", db);
