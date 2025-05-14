@@ -9,7 +9,7 @@ import { TechCards } from "../technology/TechCards";
 import { Speakers } from "../speakers/Speakers.jsx";
 import { Sponsors } from "../sponsors/Sponsors.jsx";
 import { Recomendation } from "../recomendation/Recomendation.jsx";
-import { Summary } from "../Summary/Summary.jsx";
+import { Summary } from "../summary/Summary.jsx";
 
 export const Home = () => {
   const location = useLocation();
