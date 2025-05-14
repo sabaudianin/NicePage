@@ -1,4 +1,5 @@
 import { BecomeASponsor } from "../../elements/BecomeSponsor";
+
 export const Sponsors = () => {
   return (
     <section className="bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200">
