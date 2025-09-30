@@ -11,16 +11,15 @@ export const AboutCard = ({
   return (
     <article className="text-3xl text-center font-medium">
       <div
-        className={`w-full h-full rounded border-b-8 px-4 ${borderColor} z-0 flex items-center justify-center gap-2`}
+        className={`w-full h-full rounded border-b-8 px-4 ${borderColor} z-0 flex items-center justify-between gap-3`}
       >
-        <p className="mb-2 flex items-center">
-          <b>{number}</b>
-          <span className="inline text-lg mr-1">
-            <FaPlus />
-          </span>
-          {label}
-        </p>
-        <Icon className={`${iconColor} text-4xl mx-auto`} />
+        <div className="inline-flex items-center gap-1 ">
+          <b className="font-bold">{number}</b>
+          <FaPlus className="w-[1em] h-[1em] translate-y-[3px]" />
+          <span className="font-medium">{label}</span>
+        </div>
+
+        <Icon className={`${iconColor} text-3xl`} />
       </div>
     </article>
   );
