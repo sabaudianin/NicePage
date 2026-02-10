@@ -33,7 +33,7 @@ export const NewsLetter = () => {
               placeholder="Write Your email"
               // aria-label="Write Your email"
               {...register("email")}
-              className="p-4 font-semibold "
+              className="p-4 font-semibold text-black "
             />
 
             <button
